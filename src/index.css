@@ -1,13 +1,57 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.card {
+  margin: 5px;
+  width: 300px;
+  height: 300px;
 }
+
+.card img {
+  width: 100%;
+  height: 100%;
+}
+
+.card > .card-body {
+  height: 100%;
+  overflow: auto;
+}
+
+.article-list__pagination {
+  background-color: #222;
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.25);
+  display: block;
+  bottom: 0;
+  left: 0;
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5em;
+  position: fixed;
+  right: 0;
+  text-align: center;
+  transform: translateY(0);
+  transition: transform 0.2s;
+  z-index: 2;
+}
+
+.article-list__pagination--inactive {
+  transform: translateY(100%);
+}
+
+
+.article-list__pagination__item {
+  display: inline-block;
+  margin: 0 1em;
+}
+.article-list__pagination__item a {
+  color: #888;
+  text-decoration: none;
+}
+.article-list__pagination__item a:hover, .article-list__pagination__item a:focus {
+  color: #aeaeae;
+}
+.article-list__pagination__item a:active {
+  color: #d5d5d5;
+}
+#article-list-pagination > li:last-child{display:none}
